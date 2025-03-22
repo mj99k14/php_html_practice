@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내 프로필</title>
+</head>
+<body>
+    <h2>내 프로필</h2>
+
+    <p><strong>이름:</strong> <span id="name">불러오는 중...</span></p>
+    <p><strong>나이:</strong> <span id="age">불러오는 중...</span></p>
+    <p><strong>성별:</strong> <span id="gender">불러오는 중...</span></p>
+    <p><strong>키:</strong> <span id="height">불러오는 중...</span> cm</p>
+
+    <br>
+    <a href="board_list.php"><button>게시판으로 이동</button></a>
+    <a href="logout.php"><button>로그아웃</button></a>
+
+    <script>
+        // 서버에서 사용자 정보 가져오기 (member_profile.php에서 JSON 데이터 받아옴)
+        fetch('profile.php')
+            .then(response => response.json())  // JSON 데이터로 변환
+            .then(data => {
+                if (data.error) {
+                    alert(data.error);
+                    location.href = 'member_login.html';  // 로그인 필요 시 로그인 페이지로 이동
+                } else {
+                    // 받아온 데이터를 HTML에 적용
+                    document.getElementById("name").innerText = data.name;
+                    document.getElementById("age").innerText = data.age;
+                    document.getElementById("gender").innerText = data.gender;
+                    document.getElementById("height").innerText = data.height;
+                }
+            })
+            .catch(error => {
+                console.error('프로필 불러오기 오류:', error);
+                alert("서버 연결 오류. 다시 시도해주세요.");
+            });
+    </script>
+</body>
+</html>
