@@ -1,5 +1,9 @@
-setTimeout(() => {
-  console.log('kmj')
-}, 3000)
+const heropy = {
+  firstName: 'Heropy',
+  lastName: 'Park',
+  getFulName: function () {
+    return `${this.firstName} ${this.lastName}`
+  }
+}
 
-//연습
+console.log(heropy.getFulName())
