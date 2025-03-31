@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Vue 시작</title>
+</head>
+
+<body>
+  <div id="app">
+    <h1>{{ message }}</h1>
+  </div>
+
+  <!-- ✅ Vue CDN 가져오기 -->
+  <script src="https://unpkg.com/vue@3"></script>
+
+  <script>
+    const app = Vue.createApp({
+      data() {
+        return {
+          message: "김민정"
+        };
+      }
+    });
+
+    app.mount('#app');
+  </script>
+</body>
+
+</html>
