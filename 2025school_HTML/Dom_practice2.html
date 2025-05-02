@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dom Tree Sibling</title>
+</head>
+
+<body>
+    <h1 id="start-point">hello</h1>
+    <p>world</p>
+    <span>안녕</span>
+
+    <script>
+        const h1 = document.getElementById('start-point');
+
+        console.log(h1.nextSibling.nodeName);//현재 노드의 바로 다음 형제 노드 (공백 포함)
+
+        console.log(h1.nextSibling.nextSibling.nodeName);
+
+        const p = h1.nextSibling.nextSibling;
+
+        console.log(p.nextSibling.nodeName);
+
+        console.log(p.nextSibling.nextSibling.nodeName);
+
+        console.log(p.previousSibling.previousSibling.nodeName);//	현재 노드의 바로 이전 형제 노드 (공백 포함)
+    </script>
+</body>
+
+</html>

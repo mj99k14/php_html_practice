@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dom HTML Element</title>
+</head>
+
+<body>
+    <h1>hello</h1>
+    <p>word</p>
+    <ul id="todolist">
+        <li>ml복습</li>
+        <li>java복습</li>
+    </ul>
+    <script>
+        const body = document.body;
+        const elemets = body.children;
+
+        console.log("body.childeren:");
+        console.log(elemets);
+        for (let index = 0; index < elemets.length; index++) {
+            console.log(`요소 ${index + 1}}`, elemets[index].nodeName); //nodeName은 대문자로 반환함
+        }
+
+        const ul = document.getElementById("todolist");
+        const listltems = ul.children;
+
+        console.log("todo리스트 항목:");
+        for (let li of listltems) {
+            console.log("-" + li.textContent.trim());// trim은 공백 제거
+        }
+    </script>
+</body>
+
+</html>
