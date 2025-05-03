@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>요소 조회 및 설정</title>
+</head>
+
+<body>
+    <h1 id="title" data-topic="dom">안녕하세요</h1>
+    <p id="desc">Dom 조작 예제입니다</p>
+    <script>
+        const heading = document.getElementById("title");//id속성이 지정된 요소를 가지고옴옴
+        const desc = document.querySelector("#desc");//선택한요소 변수에 담는것 
+
+        console.log("ID:", heading.getAttribute('id'));
+        console.log("data-topic", heading.getAttribute("data-topic"));
+
+        heading.setAttribute("data-role", "headring");//속성을 추가하거나 기존 속성 값을 바꾸는 매서드 
+        desc.setAttribute("title", "마우스를 올리면 나옵니다");
+
+        heading.setAttribute('id', 'title-2');
+        heading.removeAttribute('data-topic');
+    </script>
+</body>
+
+</html>
