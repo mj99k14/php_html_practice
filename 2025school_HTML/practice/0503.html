@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>할일 목록-1단계</title>
+</head>
+
+<body>
+    <h2>할 일 추가하기</h2>
+    <input type="text" id="todoinput" placeholder="할일을 입력하세요">
+    <button id="addBtn">추가</button>
+
+    <div id="todolist"></div>
+    <script>
+        //요소를 찾아오기
+        const input = document.getElementById("todoinput");
+        const addBtn = document.getElementById("addBtn");
+        const list = document.getElementById("todolist");
+
+        //실행할 코드
+        button.addEvnentListener("click", () => {
+            const value = input.value;
+
+            if (value.trim() === "") return;
+
+            const p = document.createElement("p");
+            p.textContent = value;
+            list.appendChild(p);
+
+            input.value = "";
+        });
+
+
+    </script>
+</body>
+
+</html>
