@@ -18,7 +18,7 @@
         const list = document.getElementById("todolist");
 
         //실행할 코드
-        button.addEvnentListener("click", () => {
+        addBtn.addEventListener("click", () => {
             const value = input.value;
 
             if (value.trim() === "") return;
@@ -29,7 +29,6 @@
 
             input.value = "";
         });
-
 
     </script>
 </body>
