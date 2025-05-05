@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<head>
+    <title>gpt안보고 치는 연습</title>
+</head>
+
+<body>
+    <input type="text" id="myInput" placeholder="할일을 입력하세요">
+    <button id="addBtn">추가</button>
+    <div id="todolist"></div>
+
+    <script>
+        const input = document.getElementById("myInput");
+        const addBtn = document.getElementById("addBtn");
+        const list = document.getElementById("todolist");
+
+        addBtn.addEventListener("click", () => {
+            const p = document.createElement("p");
+            p.textContent = input.value;
+            list.appendChild(p);
+
+            const deleteBtn = document.createElement("button");
+            deleteBtn.textContent = "삭제";
+
+            deleteBtn.addEventListener("click", () => {
+                list.removeChild(p);
+            });
+
+            p.appendChild(deleteBtn);
+            list.appendChild(P);
+            input.value = "";
+
+
+
+
+        });
+
+    </script>
+</body>

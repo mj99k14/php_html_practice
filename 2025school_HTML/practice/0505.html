@@ -1,0 +1,33 @@
+<!DOCTYPE>
+
+<head>
+    <title>
+        todolist 연습
+    </title>
+</head>
+
+<body>
+    <h2>할 일 추가하기</h2>
+    <input type="text" id="textinput" placeholder="할일을 입력하세요">
+    <button id="addBtn">추가</button>
+    <div id="todolist"></div>
+
+    <script>
+        //객체를 가져옴
+        const input = document.getElementById("textinput");
+        const add = document.getElementById("addBtn");
+        const list = document.getElementById("todolist");
+
+        add.addEventListener("click", () => {
+            const p = document.createElement("p");
+            p.textContent = input.value;
+            list.appendChild(p);
+            input.value = "";
+
+            // const value =  input.value;
+            // list.textContent = value; ->하나만 보임 
+
+        });
+
+    </script>
+</body>
