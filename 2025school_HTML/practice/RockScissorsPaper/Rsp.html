@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<head>
+    <title>가위바위보</title>
+</head>
+
+<body>
+    <button oneclick="sessorsplay">가위</button>
+    <button oneclick="rockplay">바위</button>
+    <button oneclick="papaer">보</button>
+
+    <script>
+        function play(user) {
+            const choices = ['가위', '바위', '보'];
+            const computer = choices[Math.floor(Math.random() * 3)];
+
+            let result = '';
+            if (user === computer) result = '비겼어요!';
+            else if (
+                (user === '가위' && computer === '보') ||
+                (user === '바위' && computer === '가위') ||
+                (user === '보' && computer === '바위')
+            ) result = '이겼어요!';
+            else result = '졌어요!';
+
+            document.getElementById('result').textContent = `컴퓨터: ${computer}, 결과: ${result}`;
+        }
+
+    </script>
+</body>

@@ -49,6 +49,8 @@
         form.addEventListener("submit", function (event) {
             event.preventDefault(); // 기본 동작 막기
 
+
+
             // 입력값 수집
             const name = document.getElementById("name").value;
             const age = document.getElementById("age").value;
@@ -62,6 +64,7 @@
         <p><strong>나이:</strong> ${age}</p>
         <p><strong>전화번호:</strong> ${phone}</p>
       `;
+
 
             // 출력 영역에 누적 추가
             output.appendChild(entry);
