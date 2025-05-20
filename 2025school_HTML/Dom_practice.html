@@ -12,12 +12,12 @@
     <script>
         const rootNode = document.documentElement;
 
-        console.log("Root node name:", rootNode.nodeName);//html
-        console.log("Root node type", rootNode.nodeType);//1
-        console.log("Root node childNodes", rootNode.childNodes);//5
+        console.log("Root node name:", rootNode.nodeName); //html
+        console.log("Root node type", rootNode.nodeType); //1
+        console.log("Root node childNodes", rootNode.childNodes); //5
 
         const bodyNode = document.body;
-        console.log("body의 부모 노드", bodyNode.parentNode.nodeName);//html
+        console.log("body의 부모 노드", bodyNode.parentNode.nodeName); //html
 
         if (rootNode === bodyNode.parentNode)
             console.log("body의 부모는 rootNode(html)");
