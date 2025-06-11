@@ -1,0 +1,37 @@
+// 변수 선언
+$card-background-color: yellow;
+
+@mixin border($bd-color: black) {
+    border-color: $bd-color;
+    border-style: dashed;
+    border-width: 2px;
+}
+
+@mixin align-center() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.card_container {
+    @include border(red);
+
+    .card {
+        @include align-center();
+        width: 100px;
+        height: 100px;
+        background-color: $card-background-color;
+        border: 2px solid black;
+    }
+}
+
+.img_container {
+    @include border(red);
+
+    .img {
+        width: 50px;
+        height: 50px;
+        background-color: aqua;
+    }
+}
